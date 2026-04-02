@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giliğ – Meta Reklam Performans Raporu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; }
+        /* Özel Phone Mockup Stili */
+        .phone-mockup {
+            width: 180px;
+            aspect-ratio: 4/5;
+            border: 6px solid #1f2937;
+            border-radius: 24px;
+            position: relative;
+            background-color: #e5e7eb;
+            overflow: hidden;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            flex-shrink: 0;
+        }
+        .phone-mockup::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40%;
+            height: 12px;
+            background-color: #1f2937;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+            z-index: 10;
+        }
+        .placeholder-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            color: #9ca3af;
+            text-align: center;
+            padding: 10px;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+<body class="text-slate-800 antialiased pb-20">
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm border-b border-slate-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-indigo-600 rounded-lg flex items-center justify-center text-white font-bold text-xl">
+                    G
+                </div>
+                <div>
+                    <h1 class="text-xl font-bold text-slate-900 leading-tight">Giliğ Meta Performans</h1>
+                    <p class="text-sm text-slate-500">Dijital Reklam Raporu</p>
+                </div>
+            </div>
+            <div class="flex items-center gap-2 bg-indigo-50 text-indigo-700 px-4 py-2 rounded-full font-medium text-sm border border-indigo-100">
+                <i class="fa-regular fa-calendar-days"></i>
+                01 Mart – 31 Mart 2026
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-12">
+
+        <!-- 1. Genel Performans Özeti -->
+        <section>
+            <div class="flex items-center gap-2 mb-6">
+                <i class="fa-solid fa-chart-pie text-indigo-600 text-xl"></i>
+                <h2 class="text-2xl font-bold text-slate-800">Genel Performans Özeti</h2>
+            </div>
+            
+            <div class="grid grid-cols-2 lg:grid-cols-5 gap-4">
+                <div class="bg-white rounded-2xl p-5 shadow-sm border border-slate-100 flex flex-col justify-between hover:shadow-md transition-shadow">
+                    <div class="w-10 h-10 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center mb-4"><i class="fa-solid fa-eye"></i></div>
+                    <div><p class="text-sm text-slate-500 font-medium mb-1">Toplam Gösterim</p><p class="text-2xl font-bold text-slate-900">2.188.247</p></div>
+                </div>
+                <div class="bg-white rounded-2xl p-5 shadow-sm border border-slate-100 flex flex-col justify-between hover:shadow-md transition-shadow">
+                    <div class="w-10 h-10 rounded-full bg-purple-50 text-purple-600 flex items-center justify-center mb-4"><i class="fa-solid fa-users"></i></div>
+                    <div><p class="text-sm text-slate-500 font-medium mb-1">Toplam Erişim</p><p class="text-2xl font-bold text-slate-900">1.587.165</p></div>
+                </div>
+                <div class="bg-white rounded-2xl p-5 shadow-sm border border-slate-100 flex flex-col justify-between hover:shadow-md transition-shadow">
+                    <div class="w-10 h-10 rounded-full bg-green-50 text-green-600 flex items-center justify-center mb-4"><i class="fa-solid fa-bullseye"></i></div>
+                    <div><p class="text-sm text-slate-500 font-medium mb-1">Toplam Sonuç (KPI)</p><p class="text-2xl font-bold text-slate-900">1.435.546<span class="text-green-500 text-lg">+</span></p></div>
+                </div>
+                <div class="bg-white rounded-2xl p-5 shadow-sm border border-slate-100 flex flex-col justify-between hover:shadow-md transition-shadow">
+                    <div class="w-10 h-10 rounded-full bg-orange-50 text-orange-600 flex items-center justify-center mb-4"><i class="fa-solid fa-wallet"></i></div>
+                    <div><p class="text-sm text-slate-500 font-medium mb-1">Toplam Harcama</p><p class="text-2xl font-bold text-slate-900">93.854 ₺</p></div>
+                </div>
+                <div class="bg-white rounded-2xl p-5 shadow-sm border border-slate-100 flex flex-col justify-between hover:shadow-md transition-shadow">
+                    <div class="w-10 h-10 rounded-full bg-pink-50 text-pink-600 flex items-center justify-center mb-4"><i class="fa-brands fa-instagram"></i></div>
+                    <div><p class="text-sm text-slate-500 font-medium mb-1">Takipçi Kazanımı</p><p class="text-2xl font-bold text-slate-900">1.653</p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Giliğ Sokak Lezzetleri -->
+        <section class="bg-white p-6 md:p-8 rounded-3xl border border-orange-100 shadow-sm relative overflow-hidden">
+            <!-- Arkaplan Deseni -->
+            <div class="absolute top-0 right-0 p-8 opacity-[0.03] pointer-events-none">
+                <i class="fa-solid fa-burger text-[250px]"></i>
+            </div>
+            
+            <div class="flex items-center gap-4 mb-8 border-b border-slate-100 pb-5 relative z-10">
+                <div class="w-14 h-14 bg-orange-100 rounded-2xl flex items-center justify-center text-orange-500 text-2xl shadow-sm">
+                    <i class="fa-solid fa-burger"></i>
+                </div>
+                <div>
+                    <h2 class="text-3xl font-extrabold text-slate-800 tracking-tight">Giliğ Sokak Lezzetleri</h2>
+                    <p class="text-slate-500 text-sm mt-1">Takip ve Bilinirlik Kampanyaları Performansı</p>
+                </div>
+            </div>
+
+            <!-- Sokak Lezzetleri: Takip -->
+            <div class="mb-10 relative z-10">
+                <div class="flex items-center gap-2 mb-6">
+                    <span class="w-8 h-8 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-sm"><i class="fa-solid fa-user-plus"></i></span>
+                    <h3 class="text-xl font-bold text-slate-700">Takip / Profil Ziyareti Kampanyaları</h3>
+                </div>
+                <div class="grid grid-cols-1 xl:grid-cols-2 gap-6">
+                    <!-- Kampanya -->
+                    <div class="bg-slate-50/50 rounded-2xl p-5 border border-slate-100 flex flex-col sm:flex-row gap-6 items-center sm:items-start group hover:bg-white hover:border-orange-200 hover:shadow-md transition-all">
+                        <div class="phone-mockup">
+                            <img src="images/sokak-genel-takip-kampanyası.jpeg">
+                            <div class="placeholder-content"><i class="fa-regular fa-image text-3xl mb-2 opacity-50"></i><span class="text-xs font-medium">Görsel Alanı</span><span class="text-[10px] opacity-70">4:5 Carousel</span></div></div>
+                        <div class="flex-1 w-full">
+                            <div class="text-[11px] font-bold tracking-wider text-slate-400 uppercase mb-1">03-18 Mart <span class="mx-1">|</span> Takip</div>
+                            <h3 class="text-lg font-bold text-slate-900 mb-4 group-hover:text-orange-600 transition-colors">Genel Takip Kampanyası</h3>
+                            <div class="grid grid-cols-3 gap-3">
+                                <div class="bg-white p-3 rounded-xl border border-slate-100 shadow-sm"><p class="text-[11px] text-slate-500 mb-1">Sonuç</p><p class="font-bold text-slate-800">308</p></div>
+                                <div class="bg-white p-3 rounded-xl border border-slate-100 shadow-sm"><p class="text-[11px] text-slate-500 mb-1">Gösterim</p><p class="font-bold text-slate-800">8.841</p></div>
+                                <div class="bg-white p-3 rounded-xl border border-slate-100 shadow-sm"><p class="text-[11px] text-slate-500 mb-1">Erişim</p><p class="font-bold text-slate-800">8.192</p></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Kampanya -->
+                    <div class="bg-slate-50/50 rounded-2xl p-5 border border-slate-100 flex flex-col sm:flex-row gap-6 items-center sm:items-start group hover:bg-white hover:border-orange-200 hover:shadow-md transition-all">
+                        <div class="phone-mockup">
+                            <img src="images/Giliğ Sokak Lezzetleri.jpg" alt="Takip Kampanyası Kopya" class="w-full h-full object-cover">
+                            <div class="placeholder-content"><i class="fa-regular fa-image text-3xl mb-2 opacity-50"></i><span class="text-xs font-medium">Görsel Alanı</span><span class="text-[10px] opacity-70">4:5 Carousel</span></div></div>
+                        <div class="flex-1 w-full">
+                            <div class="text-[11px] font-bold tracking-wider text-slate-400 uppercase mb-1">03-18 Mart <span class="mx-1">|</span> Takip</div>
+                            <h3 class="text-lg font-bold text-slate-900 mb-4 group-hover:text-orange-600 transition-colors">Takip Kampanyası Kopya</h3>
+                            <div class="grid grid-cols-3 gap-3">
+                                <div class="bg-white p-3 rounded-xl border border-slate-100 shadow-sm"><p class="text-[11px] text-slate-500 mb-1">Sonuç</p><p class="font-bold text-slate-800">4.566</p></div>
+                                <div class="bg-white p-3 rounded-xl border border-slate-100 shadow-sm"><p class="text-[11px] text-slate-500 mb-1">Gösterim</p><p class="font-bold text-slate-800">99.627</p></div>
+                                <div class="bg-white p-3 rounded-xl border border-slate-100 shadow-sm"><p class="text-[11px] text-slate-500 mb-1">Erişim</p><p class="font-bold text-slate-800">61.692</p></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Kampanya -->
+                    <div class="bg-slate-50/50 rounded-2xl p-5 border border-slate-100 flex flex-col sm:flex-row gap-6 items-center sm:items-start group hover:bg-white hover:border-orange-200 hover:shadow-md transition-all">
+                        <div class="phone-mockup">
+                            <img src="images/sokak-lezzetleri-eritme.png" alt="Takip Kampanyası Kopya" class="w-full h-full object-cover">
+                            <div class="placeholder-content"><i class="fa-regular fa-image text-3xl mb-2 opacity-50"></i><span class="text-xs font-medium">Görsel Alanı</span><span class="text-[10px] opacity-70">4:5 Carousel</span></div></div>
+                        <div class="flex-1 w-full">
+                            <div class="text-[11px] font-bold tracking-wider text-slate-400 uppercase mb-1">12-30 Mart <span class="mx-1">|</span> Takip</div>
+                            <h3 class="text-lg font-bold text-slate-900 mb-4 group-hover:text-orange-600 transition-colors">İzmir Eritme Takip</h3>
+                            <div class="grid grid-cols-3 gap-3">
+                                <div class="bg-green-50 p-3 rounded-xl border border-green-100 shadow-sm"><p class="text-[11px] text-green-600 mb-1">Sonuç</p><p class="font-bold text-green-700">4.901</p></div>
+                                <div class="bg-white p-3 rounded-xl border border-slate-100 shadow-sm"><p class="text-[11px] text-slate-500 mb-1">Gösterim</p><p class="font-bold text-slate-800">138.628</p></div>
+                                <div class="bg-white p-3 rounded-xl border border-slate-100 shadow-sm"><p class="text-[11px] text-slate-500 mb-1">Erişim</p><p class="font-bold text-slate-800">101.880</p></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sokak Lezzetleri: Bilinirlik -->
+            <div class="relative z-10 border-t border-slate-100 pt-8 mt-4">
+                <div class="flex items-center gap-2 mb-6">
+                    <span class="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-sm"><i class="fa-solid fa-bullhorn"></i></span>
+                    <h3 class="text-xl font-bold text-slate-700">Bilinirlik / Erişim Kampanyaları</h3>
+                </div>
+                <div class="grid grid-cols-1 xl:grid-cols-2 gap-6">
+                    <!-- Kampanya -->
+                    <div class="bg-slate-50/50 rounded-2xl p-5 border border-slate-100 flex flex-col sm:flex-row gap-6 items-center sm:items-start group hover:bg-white hover:border-orange-200 hover:shadow-md transition-all">
+                        <div class="phone-mockup">
+                                <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=400&q=80" alt="Takip Kampanyası Kopya" class="w-full h-full object-cover">
+                            <div class="placeholder-content"><i class="fa-regular fa-image text-3xl mb-2 opacity-50"></i><span class="text-xs font-medium">Görsel Alanı</span><span class="text-[10px] opacity-70">4:5 Carousel</span></div></div>
+                        <div class="flex-1 w-full">
+                            <div class="text-[11px] font-bold tracking-wider text-slate-400 uppercase mb-1">03-18 Mart <span class="mx-1">|</span> Bilinirlik</div>
+                            <h3 class="text-lg font-bold text-slate-900 mb-4 group-hover:text-orange-600 transition-colors">Genel Bilinirlik Kampanyası</h3>
+                            <div class="grid grid-cols-3 gap-3">
+                                <div class="bg-blue-50 p-3 rounded-xl border border-blue-100 shadow-sm"><p class="text-[11px] text-blue-600 mb-1">Sonuç</p><p class="font-bold text-blue-700">613.742</p></div>
+                                <div class="bg-white p-3 rounded-xl border border-slate-100 shadow-sm"><p class="text-[11px] text-slate-500 mb-1">Gösterim</p><p class="font-bold text-slate-800">855.893</p></div>
+                                <div class="bg-white p-3 rounded-xl border border-slate-100 shadow-sm"><p class="text-[11px] text-slate-500 mb-1">Erişim</p><p class="font-bold text-slate-800">613.742</p></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Kampanya -->
+                    <div class="bg-slate-50/50 rounded-2xl p-5 border border-slate-100 flex flex-col sm:flex-row gap-6 items-center sm:items-start group hover:bg-white hover:border-orange-200 hover:shadow-md transition-all">
+                        <div class="phone-mockup">
+                            <img src="images/sokak-izmir-eritme-bilinirlik.jpeg" alt="Takip Kampanyası Kopya" class="w-full h-full object-cover"><div class="placeholder-content"><i class="fa-regular fa-image text-3xl mb-2 opacity-50"></i><span class="text-xs font-medium">Görsel Alanı</span><span class="text-[10px] opacity-70">4:5 Carousel</span></div></div>
+                        <div class="flex-1 w-full">
+                            <div class="text-[11px] font-bold tracking-wider text-slate-400 uppercase mb-1">12-30 Mart <span class="mx-1">|</span> Bilinirlik</div>
+                            <h3 class="text-lg font-bold text-slate-900 mb-4 group-hover:text-orange-600 transition-colors">İzmir Eritme Bilinirlik</h3>
+                            <div class="grid grid-cols-3 gap-3">
+                                <div class="bg-blue-50 p-3 rounded-xl border border-blue-100 shadow-sm"><p class="text-[11px] text-blue-600 mb-1">Sonuç</p><p class="font-bold text-blue-700">535.897</p></div>
+                                <div class="bg-white p-3 rounded-xl border border-slate-100 shadow-sm"><p class="text-[11px] text-slate-500 mb-1">Gösterim</p><p class="font-bold text-slate-800">221.933</p></div>
+                                <div class="bg-white p-3 rounded-xl border border-slate-100 shadow-sm"><p class="text-[11px] text-slate-500 mb-1">Erişim</p><p class="font-bold text-slate-800">168.091</p></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- 3. Giliğ Dondurma -->
+        <section class="bg-white p-6 md:p-8 rounded-3xl border border-pink-100 shadow-sm relative overflow-hidden">
+            <!-- Arkaplan Deseni -->
+            <div class="absolute top-0 right-0 p-8 opacity-[0.02] pointer-events-none">
+                <i class="fa-solid fa-ice-cream text-[250px]"></i>
+            </div>
+
+            <div class="flex items-center gap-4 mb-8 border-b border-slate-100 pb-5 relative z-10">
+                <div class="w-14 h-14 bg-pink-100 rounded-2xl flex items-center justify-center text-pink-500 text-2xl shadow-sm">
+                    <i class="fa-solid fa-ice-cream"></i>
+                </div>
+                <div>
+                    <h2 class="text-3xl font-extrabold text-slate-800 tracking-tight">Giliğ Dondurma</h2>
+                    <p class="text-slate-500 text-sm mt-1">Takip ve Bilinirlik Kampanyaları Performansı</p>
+                </div>
+            </div>
+
+            <!-- Dondurma: Takip -->
+            <div class="mb-10 relative z-10">
+                <div class="flex items-center justify-between mb-6">
+                    <div class="flex items-center gap-2">
+                        <span class="w-8 h-8 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-sm"><i class="fa-solid fa-user-plus"></i></span>
+                        <h3 class="text-xl font-bold text-slate-700">Takip / Profil Ziyareti Kampanyaları</h3>
+                    </div>
+                    <span class="bg-slate-100 text-slate-600 text-xs font-bold px-3 py-1 rounded-full border border-slate-200">8 Kampanya</span>
+                </div>
+                
+                <div class="grid grid-cols-1 xl:grid-cols-2 gap-6">
+                    <div class="bg-slate-50/50 rounded-2xl p-5 border border-slate-100 flex flex-col sm:flex-row gap-6 items-center sm:items-start group hover:bg-white hover:border-pink-200 hover:shadow-md transition-all">
+                        <div class="phone-mockup">
+                            <img src="images/dondurma-vedat-milör.jpeg"><i class="fa-regular fa-image text-3xl mb-2 opacity-50"></i><span class="text-xs font-medium">Görsel Alanı</span><span class="text-[10px] opacity-70">4:5 Carousel</span></div></div>
+                        <div class="flex-1 w-full">
+                            <div class="text-[11px] font-bold tracking-wider text-slate-400 uppercase mb-1">03-30 Mart <span class="mx-1">|</span> Takip</div>
+                            <h3 class="text-lg font-bold text-slate-900 mb-4 group-hover:text-pink-600 transition-colors">Vedat Milor</h3>
+                            <div class="grid grid-cols-3 gap-3">
+                                <div class="bg-white p-3 rounded-xl border border-slate-100 shadow-sm"><p class="text-[11px] text-slate-500 mb-1">Sonuç</p><p class="font-bold text-red-500">30</p></div>
+                                <div class="bg-white p-3 rounded-xl border border-slate-100 shadow-sm"><p class="text-[11px] text-slate-500 mb-1">Gösterim</p><p class="font-bold text-slate-800">714</p></div>
+                                <div class="bg-white p-3 rounded-xl border border-slate-100 shadow-sm"><p class="text-[11px] text-slate-500 mb-1">Erişim</p><p class="font-bold text-slate-800">696</p></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-50/50 rounded-2xl p-5 border border-slate-100 flex flex-col sm:flex-row gap-6 items-center sm:items-start group hover:bg-white hover:border-pink-200 hover:shadow-md transition-all">
+                        <div class="phone-mockup">
+                            <img src="images/dondurma-kat-kat-kreması.jpeg" alt="">
+                            <div class="placeholder-content"><i class="fa-regular fa-image text-3xl mb-2 opacity-50"></i><span class="text-xs font-medium">Görsel Alanı</span><span class="text-[10px] opacity-70">4:5 Carousel</span></div></div>
+                        <div class="flex-1 w-full">
+                            <div class="text-[11px] font-bold tracking-wider text-slate-400 uppercase mb-1">03-30 Mart <span class="mx-1">|</span> Takip</div>
+                            <h3 class="text-lg font-bold text-slate-900 mb-4 group-hover:text-pink-600 transition-colors">Kat Kat Kreması</h3>
+                            <div class="grid grid-cols-3 gap-3">
+                                <div class="bg-white p-3 rounded-xl border border-slate-100 shadow-sm"><p class="text-[11px] text-slate-500 mb-1">Sonuç</p><p class="font-bold text-slate-800">2.785</p></div>
+                                <div class="bg-white p-3 rounded-xl border border-slate-100 shadow-sm"><p class="text-[11px] text-slate-500 mb-1">Gösterim</p><p class="font-bold text-slate-800">93.117</p></div>
+                                <div class="bg-white p-3 rounded-xl border border-slate-100 shadow-sm"><p class="text-[11px] text-slate-500 mb-1">Erişim</p><p class="font-bold text-slate-800">64.833</p></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-50/50 rounded-2xl p-5 border border-slate-100 flex flex-col sm:flex-row gap-6 items-center sm:items-start group hover:bg-white hover:border-pink-200 hover:shadow-md transition-all">
+                        <div class="phone-mockup">
+                            <img src="images/dondurma-sade-yağlı-pancar.jpeg">
+                            <div class="placeholder-content"><i class="fa-regular fa-image text-3xl mb-2 opacity-50"></i><span class="text-xs font-medium">Görsel Alanı</span><span class="text-[10px] opacity-70">4:5 Carousel</span></div></div>
+                        <div class="flex-1 w-full">
+                            <div class="text-[11px] font-bold tracking-wider text-slate-400 uppercase mb-1">03-18 Mart <span class="mx-1">|</span> Takip</div>
+                            <h3 class="text-lg font-bold text-slate-900 mb-4 group-hover:text-pink-600 transition-colors">Sade Yağlı, Pancar</h3>
+                            <div class="grid grid-cols-3 gap-3">
+                                <div class="bg-white p-3 rounded-xl border border-slate-100 shadow-sm"><p class="text-[11px] text-slate-500 mb-1">Sonuç</p><p class="font-bold text-slate-800">1.671</p></div>
+                                <div class="bg-white p-3 rounded-xl border border-slate-100 shadow-sm"><p class="text-[11px] text-slate-500 mb-1">Gösterim</p><p class="font-bold text-slate-800">39.708</p></div>
+                                <div class="bg-white p-3 rounded-xl border border-slate-100 shadow-sm"><p class="text-[11px] text-slate-500 mb-1">Erişim</p><p class="font-bold text-slate-800">27.667</p></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-50/50 rounded-2xl p-5 border border-slate-100 flex flex-col sm:flex-row gap-6 items-center sm:items-start group hover:bg-white hover:border-pink-200 hover:shadow-md transition-all">
+                        <div class="phone-mockup">
+                            <img src="images/sokak-antalyanın-özgün-lezzeti.jpeg" alt="">
+                            <div class="placeholder-content"><i class="fa-regular fa-image text-3xl mb-2 opacity-50"></i><span class="text-xs font-medium">Görsel Alanı</span><span class="text-[10px] opacity-70">4:5 Carousel</span></div></div>
+                        <div class="flex-1 w-full">
+                            <div class="text-[11px] font-bold tracking-wider text-slate-400 uppercase mb-1">03-18 Mart <span class="mx-1">|</span> Takip</div>
+                            <h3 class="text-lg font-bold text-slate-900 mb-4 group-hover:text-pink-600 transition-colors">Antalya’nın Özgün Lezzeti</h3>
+                            <div class="grid grid-cols-3 gap-3">
+                                <div class="bg-white p-3 rounded-xl border border-slate-100 shadow-sm"><p class="text-[11px] text-slate-500 mb-1">Sonuç</p><p class="font-bold text-slate-800">3.010</p></div>
+                                <div class="bg-white p-3 rounded-xl border border-slate-100 shadow-sm"><p class="text-[11px] text-slate-500 mb-1">Gösterim</p><p class="font-bold text-slate-800">57.864</p></div>
+                                <div class="bg-white p-3 rounded-xl border border-slate-100 shadow-sm"><p class="text-[11px] text-slate-500 mb-1">Erişim</p><p class="font-bold text-slate-800">47.484</p></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-50/50 rounded-2xl p-5 border border-slate-100 flex flex-col sm:flex-row gap-6 items-center sm:items-start group hover:bg-white hover:border-pink-200 hover:shadow-md transition-all">
+                        <div class="phone-mockup">
+                            <img src="images/dondurma-gerçek-profiterol.jpeg" alt="">
+                            <div class="placeholder-content"><i class="fa-regular fa-image text-3xl mb-2 opacity-50"></i><span class="text-xs font-medium">Görsel Alanı</span><span class="text-[10px] opacity-70">4:5 Carousel</span></div></div>
+                        <div class="flex-1 w-full">
+                            <div class="text-[11px] font-bold tracking-wider text-slate-400 uppercase mb-1">03-18 Mart <span class="mx-1">|</span> Takip</div>
+                            <h3 class="text-lg font-bold text-slate-900 mb-4 group-hover:text-pink-600 transition-colors">Gerçek Profiterol</h3>
+                            <div class="grid grid-cols-3 gap-3">
+                                <div class="bg-white p-3 rounded-xl border border-slate-100 shadow-sm"><p class="text-[11px] text-slate-500 mb-1">Sonuç</p><p class="font-bold text-slate-800">1.489</p></div>
+                                <div class="bg-white p-3 rounded-xl border border-slate-100 shadow-sm"><p class="text-[11px] text-slate-500 mb-1">Gösterim</p><p class="font-bold text-slate-800">41.709</p></div>
+                                <div class="bg-white p-3 rounded-xl border border-slate-100 shadow-sm"><p class="text-[11px] text-slate-500 mb-1">Erişim</p><p class="font-bold text-slate-800">33.802</p></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-50/50 rounded-2xl p-5 border border-slate-100 flex flex-col sm:flex-row gap-6 items-center sm:items-start group hover:bg-white hover:border-pink-200 hover:shadow-md transition-all">
+                        <div class="phone-mockup">
+                            <img src="images/dondurma-keçi-sütlü.jpeg">
+                            <div class="placeholder-content"><i class="fa-regular fa-image text-3xl mb-2 opacity-50"></i><span class="text-xs font-medium">Görsel Alanı</span><span class="text-[10px] opacity-70">4:5 Carousel</span></div></div>
+                        <div class="flex-1 w-full">
+                            <div class="text-[11px] font-bold tracking-wider text-slate-400 uppercase mb-1">03-30 Mart <span class="mx-1">|</span> Takip</div>
+                            <h3 class="text-lg font-bold text-slate-900 mb-4 group-hover:text-pink-600 transition-colors">%100 Keçi Sütlü</h3>
+                            <div class="grid grid-cols-3 gap-3">
+                                <div class="bg-green-50 p-3 rounded-xl border border-green-100 shadow-sm"><p class="text-[11px] text-green-600 mb-1">Sonuç</p><p class="font-bold text-green-700">5.790</p></div>
+                                <div class="bg-white p-3 rounded-xl border border-slate-100 shadow-sm"><p class="text-[11px] text-slate-500 mb-1">Gösterim</p><p class="font-bold text-slate-800">116.049</p></div>
+                                <div class="bg-white p-3 rounded-xl border border-slate-100 shadow-sm"><p class="text-[11px] text-slate-500 mb-1">Erişim</p><p class="font-bold text-slate-800">95.921</p></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-50/50 rounded-2xl p-5 border border-slate-100 flex flex-col sm:flex-row gap-6 items-center sm:items-start group hover:bg-white hover:border-pink-200 hover:shadow-md transition-all">
+                        <div class="phone-mockup">
+                            <img src="images/dondurma-tahin-sever.jpeg">
+                            <div class="placeholder-content"><i class="fa-regular fa-image text-3xl mb-2 opacity-50"></i><span class="text-xs font-medium">Görsel Alanı</span><span class="text-[10px] opacity-70">4:5 Carousel</span></div></div>
+                        <div class="flex-1 w-full">
+                            <div class="text-[11px] font-bold tracking-wider text-slate-400 uppercase mb-1">12-30 Mart <span class="mx-1">|</span> Takip</div>
+                            <h3 class="text-lg font-bold text-slate-900 mb-4 group-hover:text-pink-600 transition-colors">Tahin Sever</h3>
+                            <div class="grid grid-cols-3 gap-3">
+                                <div class="bg-white p-3 rounded-xl border border-slate-100 shadow-sm"><p class="text-[11px] text-slate-500 mb-1">Sonuç</p><p class="font-bold text-slate-800">3.556</p></div>
+                                <div class="bg-white p-3 rounded-xl border border-slate-100 shadow-sm"><p class="text-[11px] text-slate-500 mb-1">Gösterim</p><p class="font-bold text-slate-800">92.848</p></div>
+                                <div class="bg-white p-3 rounded-xl border border-slate-100 shadow-sm"><p class="text-[11px] text-slate-500 mb-1">Erişim</p><p class="font-bold text-slate-800">64.460</p></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-50/50 rounded-2xl p-5 border border-slate-100 flex flex-col sm:flex-row gap-6 items-center sm:items-start group hover:bg-white hover:border-pink-200 hover:shadow-md transition-all">
+                        <div class="phone-mockup">
+                            <img src="images/dondurma-bayram-geliyor.jpeg">
+                            <div class="placeholder-content"><i class="fa-regular fa-image text-3xl mb-2 opacity-50"></i><span class="text-xs font-medium">Görsel Alanı</span><span class="text-[10px] opacity-70">4:5 Carousel</span></div></div>
+                        <div class="flex-1 w-full">
+                            <div class="text-[11px] font-bold tracking-wider text-slate-400 uppercase mb-1">13-18 Mart <span class="mx-1">|</span> Takip</div>
+                            <h3 class="text-lg font-bold text-slate-900 mb-4 group-hover:text-pink-600 transition-colors">Bayram Geliyor</h3>
+                            <div class="grid grid-cols-3 gap-3">
+                                <div class="bg-green-50 p-3 rounded-xl border border-green-100 shadow-sm"><p class="text-[11px] text-green-600 mb-1">Sonuç</p><p class="font-bold text-green-700">5.621</p></div>
+                                <div class="bg-white p-3 rounded-xl border border-slate-100 shadow-sm"><p class="text-[11px] text-slate-500 mb-1">Gösterim</p><p class="font-bold text-slate-800">56.079</p></div>
+                                <div class="bg-white p-3 rounded-xl border border-slate-100 shadow-sm"><p class="text-[11px] text-slate-500 mb-1">Erişim</p><p class="font-bold text-slate-800">50.524</p></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dondurma: Bilinirlik -->
+            <div class="relative z-10 border-t border-slate-100 pt-8 mt-4">
+                <div class="flex items-center gap-2 mb-6">
+                    <span class="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-sm"><i class="fa-solid fa-bullhorn"></i></span>
+                    <h3 class="text-xl font-bold text-slate-700">Bilinirlik / Erişim Kampanyaları</h3>
+                </div>
+                <div class="grid grid-cols-1 xl:grid-cols-2 gap-6">
+                    <div class="bg-slate-50/50 rounded-2xl p-5 border border-slate-100 flex flex-col sm:flex-row gap-6 items-center sm:items-start group hover:bg-white hover:border-pink-200 hover:shadow-md transition-all">
+                        <div class="phone-mockup">
+                            <img src="images/Giliğ Sokak Lezzetleri.jpg" alt="giliğ logo ınfluencer" class="w-full h-full object-cover">
+                            <div class="placeholder-content"><i class="fa-regular fa-image text-3xl mb-2 opacity-50"></i><span class="text-xs font-medium">Görsel Alanı</span><span class="text-[10px] opacity-70">4:5 Carousel</span></div></div>
+                        <div class="flex-1 w-full">
+                            <div class="text-[11px] font-bold tracking-wider text-slate-400 uppercase mb-1">16-22 Mart <span class="mx-1">|</span> Bilinirlik</div>
+                            <h3 class="text-lg font-bold text-slate-900 mb-4 group-hover:text-pink-600 transition-colors">Influencer</h3>
+                            <div class="grid grid-cols-3 gap-3">
+                                <div class="bg-blue-50 p-3 rounded-xl border border-blue-100 shadow-sm"><p class="text-[11px] text-blue-600 mb-1">Sonuç (Erişim)</p><p class="font-bold text-blue-700">248.181</p></div>
+                                <div class="bg-white p-3 rounded-xl border border-slate-100 shadow-sm"><p class="text-[11px] text-slate-500 mb-1">Gösterim</p><p class="font-bold text-slate-800">365.237</p></div>
+                                <div class="bg-white p-3 rounded-xl border border-slate-100 shadow-sm"><p class="text-[11px] text-slate-500 mb-1">Erişim</p><p class="font-bold text-slate-800">248.181</p></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- 4. Liderlik Tablosu (Sadece Kartlar, Görsel Yok) -->
+        <section class="mt-8">
+            <div class="flex items-center gap-2 mb-6">
+                <i class="fa-solid fa-trophy text-yellow-500 text-xl"></i>
+                <h2 class="text-2xl font-bold text-slate-800">En Yüksek Sonuç Alan Kampanyalar</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Bilinirlik Liderleri -->
+                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+                    <div class="bg-slate-50 px-5 py-4 border-b border-slate-200 flex justify-between items-center">
+                        <h3 class="font-bold text-slate-800">Bilinirlik / Erişim Liderleri</h3>
+                        <i class="fa-solid fa-chart-line text-blue-500"></i>
+                    </div>
+                    <ul class="divide-y divide-slate-100">
+                        <li class="p-4 flex items-center justify-between hover:bg-slate-50 transition-colors">
+                            <div><p class="font-medium text-slate-800 text-sm">Giliğ Sokak L. <span class="text-slate-400 font-normal">| Bilinirlik</span></p></div>
+                            <span class="font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded-lg text-sm">613.742</span>
+                        </li>
+                        <li class="p-4 flex items-center justify-between hover:bg-slate-50 transition-colors">
+                            <div><p class="font-medium text-slate-800 text-sm">Giliğ Sokak L. <span class="text-slate-400 font-normal">| İzmir Eritme</span></p></div>
+                            <span class="font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded-lg text-sm">535.897</span>
+                        </li>
+                        <li class="p-4 flex items-center justify-between hover:bg-slate-50 transition-colors">
+                            <div><p class="font-medium text-slate-800 text-sm">Giliğ Dondurma <span class="text-slate-400 font-normal">| Influencer</span></p></div>
+                            <span class="font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded-lg text-sm">248.181</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Takip Liderleri -->
+                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+                    <div class="bg-slate-50 px-5 py-4 border-b border-slate-200 flex justify-between items-center">
+                        <h3 class="font-bold text-slate-800">Profil Ziyareti Liderleri (Top 5)</h3>
+                        <i class="fa-solid fa-arrow-trend-up text-green-500"></i>
+                    </div>
+                    <ul class="divide-y divide-slate-100">
+                        <li class="p-4 flex items-center justify-between hover:bg-slate-50 transition-colors">
+                            <div><p class="font-medium text-slate-800 text-sm">Giliğ Dondurma <span class="text-slate-400 font-normal">| %100 Keçi Sütlü</span></p></div>
+                            <span class="font-bold text-green-600 bg-green-50 px-3 py-1 rounded-lg text-sm">5.790</span>
+                        </li>
+                        <li class="p-4 flex items-center justify-between hover:bg-slate-50 transition-colors">
+                            <div><p class="font-medium text-slate-800 text-sm">Giliğ Dondurma <span class="text-slate-400 font-normal">| Bayram Geliyor</span></p></div>
+                            <span class="font-bold text-green-600 bg-green-50 px-3 py-1 rounded-lg text-sm">5.621</span>
+                        </li>
+                        <li class="p-4 flex items-center justify-between hover:bg-slate-50 transition-colors">
+                            <div><p class="font-medium text-slate-800 text-sm">Giliğ Sokak L. <span class="text-slate-400 font-normal">| İzmir Eritme Takip</span></p></div>
+                            <span class="font-bold text-green-600 bg-green-50 px-3 py-1 rounded-lg text-sm">4.901</span>
+                        </li>
+                        <li class="p-4 flex items-center justify-between hover:bg-slate-50 transition-colors">
+                            <div><p class="font-medium text-slate-800 text-sm">Giliğ Sokak L. <span class="text-slate-400 font-normal">| Takip Kopya</span></p></div>
+                            <span class="font-bold text-green-600 bg-green-50 px-3 py-1 rounded-lg text-sm">4.566</span>
+                        </li>
+                        <li class="p-4 flex items-center justify-between hover:bg-slate-50 transition-colors">
+                            <div><p class="font-medium text-slate-800 text-sm">Giliğ Dondurma <span class="text-slate-400 font-normal">| Tahin Sever</span></p></div>
+                            <span class="font-bold text-green-600 bg-green-50 px-3 py-1 rounded-lg text-sm">3.556</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Kısa Değerlendirme -->
+        <section class="mt-8 bg-indigo-900 rounded-3xl p-8 shadow-xl text-white relative overflow-hidden">
+            <!-- Arkaplan Dekoru -->
+            <div class="absolute top-0 right-0 -mr-16 -mt-16 opacity-10">
+                <i class="fa-solid fa-lightbulb text-[200px]"></i>
+            </div>
+            
+            <div class="relative z-10">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="w-12 h-12 bg-indigo-800 rounded-full flex items-center justify-center text-yellow-400 text-xl">
+                        <i class="fa-regular fa-comment-dots"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold">Kısa Değerlendirme & İçgörüler</h2>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6">
+                    <div class="flex items-start gap-4">
+                        <div class="mt-1 text-indigo-400"><i class="fa-solid fa-circle-check"></i></div>
+                        <p class="text-indigo-50 leading-relaxed"><strong class="text-white">Bilinirlik Tarafı:</strong> En güçlü performans, açık ara Giliğ Sokak Lezzetleri kampanyalarında görülüyor.</p>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="mt-1 text-indigo-400"><i class="fa-solid fa-circle-check"></i></div>
+                        <p class="text-indigo-50 leading-relaxed"><strong class="text-white">Profil Ziyareti Zirvesi:</strong> En iyi sonuçları "%100 Keçi Sütlü" ve "Bayram Geliyor" kampanyaları almış durumda.</p>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="mt-1 text-red-400"><i class="fa-solid fa-circle-exclamation"></i></div>
+                        <p class="text-indigo-50 leading-relaxed"><strong class="text-white">Gelişim Alanı:</strong> Vedat Milor kampanyası sonuç (30) ve gösterim (714) bazında oldukça düşük kalmış, optimizasyon gerektiriyor.</p>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="mt-1 text-green-400"><i class="fa-solid fa-star"></i></div>
+                        <p class="text-indigo-50 leading-relaxed"><strong class="text-white">İzmir Eritme Etkisi:</strong> Hem bilinirlik hem takip tarafında dikkat çeken güçlü ve çok yönlü bir içerik olmuş.</p>
+                    </div>
+                    <div class="flex items-start gap-4 md:col-span-2 border-t border-indigo-800 pt-6 mt-2">
+                        <div class="mt-1 text-yellow-400"><i class="fa-solid fa-chart-pie"></i></div>
+                        <p class="text-indigo-50 leading-relaxed"><strong class="text-white">Genel Çıkarım:</strong> Dondurma tarafında "ürün odaklı" kampanyalar (%100 Keçi, Bayram, Tahin), takip ve profil ziyareti üretmede influencer/kişi bazlı içeriklere göre genel olarak daha verimli görünüyor.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+</body>
+</html>
