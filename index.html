@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giliğ – Meta Reklam Performans Raporu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; }
+        /* Özel Phone Mockup Stili */
+        .phone-mockup {
+            width: 160px;
+            aspect-ratio: 4/5;
+            border: 6px solid #1f2937;
+            border-radius: 24px;
+            position: relative;
+            background-color: #e5e7eb;
+            overflow: hidden;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            flex-shrink: 0;
+        }
+        .phone-mockup::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40%;
+            height: 12px;
+            background-color: #1f2937;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+            z-index: 10;
+        }
+        .placeholder-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            color: #9ca3af;
+            text-align: center;
+            padding: 10px;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+<body class="text-slate-800 antialiased pb-20">
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm border-b border-slate-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-indigo-600 rounded-lg flex items-center justify-center text-white font-bold text-xl">
+                    <img src="images/gilig-sokak-lezzetleri-logo.png" alt="gilig logo">
+                </div>
+                <div>
+                    <h1 class="text-xl font-bold text-slate-900 leading-tight">Giliğ Meta Performans</h1>
+                    <p class="text-sm text-slate-500">Dijital Reklam Raporu</p>
+                </div>
+            </div>
+            
+            <div class="flex items-center gap-2 bg-indigo-50 text-indigo-700 px-4 py-2 rounded-full font-medium text-sm border border-indigo-100">
+                <i class="fa-regular fa-calendar-days"></i>
+                01 Mart – 31 Mart 2026
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-12">
+
+        <!-- 1. Genel Performans Özeti (Sabit Bırakıldı) -->
+        <section>
+            <div class="flex items-center gap-2 mb-6">
+                <i class="fa-solid fa-chart-pie text-indigo-600 text-xl"></i>
+                <h2 class="text-2xl font-bold text-slate-800">Genel Performans Özeti</h2>
+            </div>
+            
+            <div class="grid grid-cols-2 lg:grid-cols-5 gap-4">
+                <div class="bg-white rounded-2xl p-5 shadow-sm border border-slate-100 flex flex-col justify-between hover:shadow-md transition-shadow">
+                    <div class="w-10 h-10 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center mb-4"><i class="fa-solid fa-eye"></i></div>
+                    <div><p class="text-sm text-slate-500 font-medium mb-1">Toplam Gösterim</p><p class="text-2xl font-bold text-slate-900">2.188.247</p></div>
+                </div>
+                <div class="bg-white rounded-2xl p-5 shadow-sm border border-slate-100 flex flex-col justify-between hover:shadow-md transition-shadow">
+                    <div class="w-10 h-10 rounded-full bg-purple-50 text-purple-600 flex items-center justify-center mb-4"><i class="fa-solid fa-users"></i></div>
+                    <div><p class="text-sm text-slate-500 font-medium mb-1">Toplam Erişim</p><p class="text-2xl font-bold text-slate-900">1.587.165</p></div>
+                </div>
+                <div class="bg-white rounded-2xl p-5 shadow-sm border border-slate-100 flex flex-col justify-between hover:shadow-md transition-shadow">
+                    <div class="w-10 h-10 rounded-full bg-green-50 text-green-600 flex items-center justify-center mb-4"><i class="fa-solid fa-bullseye"></i></div>
+                    <div><p class="text-sm text-slate-500 font-medium mb-1">Toplam Sonuç (KPI)</p><p class="text-2xl font-bold text-slate-900">1.435.546<span class="text-green-500 text-lg">+</span></p></div>
+                </div>
+                <div class="bg-white rounded-2xl p-5 shadow-sm border border-slate-100 flex flex-col justify-between hover:shadow-md transition-shadow">
+                    <div class="w-10 h-10 rounded-full bg-orange-50 text-orange-600 flex items-center justify-center mb-4"><i class="fa-solid fa-wallet"></i></div>
+                    <div><p class="text-sm text-slate-500 font-medium mb-1">Toplam Harcama</p><p class="text-2xl font-bold text-slate-900">93.854 ₺</p></div>
+                </div>
+                <div class="bg-white rounded-2xl p-5 shadow-sm border border-slate-100 flex flex-col justify-between hover:shadow-md transition-shadow">
+                    <div class="w-10 h-10 rounded-full bg-pink-50 text-pink-600 flex items-center justify-center mb-4"><i class="fa-brands fa-instagram"></i></div>
+                    <div><p class="text-sm text-slate-500 font-medium mb-1">Takipçi Kazanımı</p><p class="text-2xl font-bold text-slate-900">1.653</p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. BİLİNİRLİK VE ERİŞİM KAMPANYALARI -->
+        <section class="bg-white p-6 md:p-8 rounded-3xl border border-blue-100 shadow-sm relative overflow-hidden">
+            <div class="absolute top-0 right-0 p-8 opacity-[0.03] pointer-events-none">
+                <i class="fa-solid fa-bullhorn text-[250px]"></i>
+            </div>
+            
+            <div class="flex items-center gap-4 mb-8 border-b border-slate-100 pb-5 relative z-10">
+                <div class="w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center text-blue-600 text-2xl shadow-sm">
+                    <i class="fa-solid fa-globe"></i>
+                </div>
+                <div>
+                    <h2 class="text-3xl font-extrabold text-slate-800 tracking-tight">Erişim ve Bilinirlik Kampanyaları</h2>
+                    <p class="text-slate-500 text-sm mt-1">Hedef: Maksimum kişiye ulaşmak (Reach)</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 xl:grid-cols-2 gap-6 relative z-10">
+                
+                <!-- Kampanya 1 -->
+                <div class="bg-slate-50/50 rounded-2xl p-5 border border-slate-100 flex flex-col sm:flex-row gap-6 items-center sm:items-start group hover:bg-white hover:border-blue-200 hover:shadow-md transition-all">
+                    <div class="phone-mockup">
+                        <div class="placeholder-content"><i class="fa-regular fa-image text-3xl mb-2 opacity-50"></i><span class="text-xs font-medium">
+                            <div class="phone-mockup w-48 h-64 bg-gray-200 overflow-hidden rounded-xl">
+    <div class="placeholder-content w-full h-full flex items-center justify-center">
+        <img src="images/gilig-sokak-iftarda-lezzet-arayanlara.jpeg" 
+             alt="Dondurma" 
+             class="w-full h-full object-cover">
+    </div>
+</div>
+                        </span></div>
+                    </div>
+                    <div class="flex-1 w-full">
+                        <div class="flex justify-between items-center mb-1">
+                            <div class="text-[11px] font-bold tracking-wider text-slate-400 uppercase">1 - 18 Mart <span class="mx-1">|</span> Reach</div>
+                        </div>
+                        <h3 class="text-[17px] font-bold text-slate-900 mb-4 group-hover:text-blue-600 transition-colors leading-tight">Giliğ Sokak Lezzetleri 03-18 Mart 2026 Bilinirlik</h3>
+                        
+                        <div class="grid grid-cols-3 gap-2 mb-2">
+                            <div class="bg-blue-50 p-2.5 rounded-xl border border-blue-100 shadow-sm"><p class="text-[10px] text-blue-600 mb-1">Erişim (Sonuç)</p><p class="font-bold text-blue-700 text-sm">613.742</p></div>
+                            <div class="bg-white p-2.5 rounded-xl border border-slate-100 shadow-sm"><p class="text-[10px] text-slate-500 mb-1">Gösterim</p><p class="font-bold text-slate-800 text-sm">855.893</p></div>
+                            <div class="bg-white p-2.5 rounded-xl border border-slate-100 shadow-sm"><p class="text-[10px] text-slate-500 mb-1">Erişim</p><p class="font-bold text-slate-800 text-sm">613.742</p></div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2">
+                            <div class="bg-slate-100/50 p-2 rounded-lg border border-slate-100 flex justify-between items-center"><span class="text-[11px] text-slate-500">Harcama:</span><span class="font-bold text-slate-700 text-sm">7.498,37 ₺</span></div>
+                            <div class="bg-green-50 p-2 rounded-lg border border-green-100 flex justify-between items-center"><span class="text-[11px] text-green-600">Takipçi:</span><span class="font-bold text-green-700 text-sm">+46</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kampanya 2 -->
+                <div class="bg-slate-50/50 rounded-2xl p-5 border border-slate-100 flex flex-col sm:flex-row gap-6 items-center sm:items-start group hover:bg-white hover:border-blue-200 hover:shadow-md transition-all">
+                    <div class="phone-mockup">
+                        <div class="placeholder-content"><i class="fa-regular fa-image text-3xl mb-2 opacity-50"></i><span class="text-xs font-medium">
+                             <div class="phone-mockup w-48 h-64 bg-gray-200 overflow-hidden rounded-xl">
+    <div class="placeholder-content w-full h-full flex items-center justify-center">
+        <img src="images/gilig-sokak-izmirin-sevilen.jpeg" 
+             alt="Dondurma" 
+             class="w-full h-full object-cover">
+    </div>
+</div>
+                        </span></div>
+                    </div>
+                    <div class="flex-1 w-full">
+                        <div class="text-[11px] font-bold tracking-wider text-slate-400 uppercase mb-1">1 - 30 Mart <span class="mx-1">|</span> Reach</div>
+                        <h3 class="text-[17px] font-bold text-slate-900 mb-4 group-hover:text-blue-600 transition-colors leading-tight">Giliğ Sokak Lezzetleri 12-30 Mart 2026 izmir Eritme - Bilinirlik</h3>
+                        
+                        <div class="grid grid-cols-3 gap-2 mb-2">
+                            <div class="bg-blue-50 p-2.5 rounded-xl border border-blue-100 shadow-sm"><p class="text-[10px] text-blue-600 mb-1">Erişim (Sonuç)</p><p class="font-bold text-blue-700 text-sm">168.091</p></div>
+                            <div class="bg-white p-2.5 rounded-xl border border-slate-100 shadow-sm"><p class="text-[10px] text-slate-500 mb-1">Gösterim</p><p class="font-bold text-slate-800 text-sm">221.933</p></div>
+                            <div class="bg-white p-2.5 rounded-xl border border-slate-100 shadow-sm"><p class="text-[10px] text-slate-500 mb-1">Erişim</p><p class="font-bold text-slate-800 text-sm">168.091</p></div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2">
+                            <div class="bg-slate-100/50 p-2 rounded-lg border border-slate-100 flex justify-between items-center"><span class="text-[11px] text-slate-500">Harcama:</span><span class="font-bold text-slate-700 text-sm">12.899,87 ₺</span></div>
+                            <div class="bg-green-50 p-2 rounded-lg border border-green-100 flex justify-between items-center"><span class="text-[11px] text-green-600">Takipçi:</span><span class="font-bold text-green-700 text-sm">+66</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kampanya 3 -->
+                <div class="bg-slate-50/50 rounded-2xl p-5 border border-slate-100 flex flex-col sm:flex-row gap-6 items-center sm:items-start group hover:bg-white hover:border-blue-200 hover:shadow-md transition-all">
+                    <div class="phone-mockup">
+                        <div class="placeholder-content"><i class="fa-regular fa-image text-3xl mb-2 opacity-50"></i><span class="text-xs font-medium">
+                            <div class="phone-mockup w-48 h-64 bg-gray-200 overflow-hidden rounded-xl">
+    <div class="placeholder-content w-full h-full flex items-center justify-center">
+        <img src="images/dondurma-bayram-tatlisi-telasi.jpeg" 
+             alt="Dondurma" 
+             class="w-full h-full object-cover">
+    </div>
+</div>
+                        </span></div>
+                    </div>
+                    <div class="flex-1 w-full">
+                        <div class="text-[11px] font-bold tracking-wider text-slate-400 uppercase mb-1">1 Mart - 22 Nisan <span class="mx-1">|</span> Reach</div>
+                        <h3 class="text-[17px] font-bold text-slate-900 mb-4 group-hover:text-blue-600 transition-colors leading-tight">Bayram tatlısı telaşı bu yıl</h3>
+                        
+                        <div class="grid grid-cols-3 gap-2 mb-2">
+                            <div class="bg-blue-50 p-2.5 rounded-xl border border-blue-100 shadow-sm"><p class="text-[10px] text-blue-600 mb-1">Erişim (Sonuç)</p><p class="font-bold text-blue-700 text-sm">135.621</p></div>
+                            <div class="bg-white p-2.5 rounded-xl border border-slate-100 shadow-sm"><p class="text-[10px] text-slate-500 mb-1">Gösterim</p><p class="font-bold text-slate-800 text-sm">180.127</p></div>
+                            <div class="bg-white p-2.5 rounded-xl border border-slate-100 shadow-sm"><p class="text-[10px] text-slate-500 mb-1">Erişim</p><p class="font-bold text-slate-800 text-sm">135.621</p></div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2">
+                            <div class="bg-slate-100/50 p-2 rounded-lg border border-slate-100 flex justify-between items-center"><span class="text-[11px] text-slate-500">Harcama:</span><span class="font-bold text-slate-700 text-sm">7.479,16 ₺</span></div>
+                            <div class="bg-green-50 p-2 rounded-lg border border-green-100 flex justify-between items-center"><span class="text-[11px] text-green-600">Takipçi:</span><span class="font-bold text-green-700 text-sm">+21</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kampanya 4 -->
+                <div class="bg-slate-50/50 rounded-2xl p-5 border border-slate-100 flex flex-col sm:flex-row gap-6 items-center sm:items-start group hover:bg-white hover:border-blue-200 hover:shadow-md transition-all">
+                    <div class="phone-mockup">
+                        <div class="placeholder-content"><i class="fa-regular fa-image text-3xl mb-2 opacity-50"></i><span class="text-xs font-medium">
+                            <div class="phone-mockup w-48 h-64 bg-gray-200 overflow-hidden rounded-xl">
+    <div class="placeholder-content w-full h-full flex items-center justify-center">
+        <img src="images/dondurma-geleneksel-lezzetlerin-sirri.jpeg" 
+             alt="Dondurma" 
+             class="w-full h-full object-cover">
+    </div>
+</div>
+                        </span></div>
+                    </div>
+                    <div class="flex-1 w-full">
+                        <div class="text-[11px] font-bold tracking-wider text-slate-400 uppercase mb-1">1 Mart - 22 Nisan <span class="mx-1">|</span> Reach</div>
+                        <h3 class="text-[17px] font-bold text-slate-900 mb-4 group-hover:text-blue-600 transition-colors leading-tight">Geleneksel lezzetlerin sırrı</h3>
+                        
+                        <div class="grid grid-cols-3 gap-2 mb-2">
+                            <div class="bg-blue-50 p-2.5 rounded-xl border border-blue-100 shadow-sm"><p class="text-[10px] text-blue-600 mb-1">Erişim (Sonuç)</p><p class="font-bold text-blue-700 text-sm">144.248</p></div>
+                            <div class="bg-white p-2.5 rounded-xl border border-slate-100 shadow-sm"><p class="text-[10px] text-slate-500 mb-1">Gösterim</p><p class="font-bold text-slate-800 text-sm">185.118</p></div>
+                            <div class="bg-white p-2.5 rounded-xl border border-slate-100 shadow-sm"><p class="text-[10px] text-slate-500 mb-1">Erişim</p><p class="font-bold text-slate-800 text-sm">144.248</p></div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2">
+                            <div class="bg-slate-100/50 p-2 rounded-lg border border-slate-100 flex justify-between items-center"><span class="text-[11px] text-slate-500">Harcama:</span><span class="font-bold text-slate-700 text-sm">15.550,92 ₺</span></div>
+                            <div class="bg-green-50 p-2 rounded-lg border border-green-100 flex justify-between items-center"><span class="text-[11px] text-green-600">Takipçi:</span><span class="font-bold text-green-700 text-sm">+16</span></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- 3. PROFİL ZİYARETİ VE TAKİP KAMPANYALARI -->
+        <section class="bg-white p-6 md:p-8 rounded-3xl border border-green-100 shadow-sm relative overflow-hidden">
+            <div class="absolute top-0 right-0 p-8 opacity-[0.02] pointer-events-none">
+                <i class="fa-solid fa-users-viewfinder text-[250px]"></i>
+            </div>
+
+            <div class="flex items-center gap-4 mb-8 border-b border-slate-100 pb-5 relative z-10">
+                <div class="w-14 h-14 bg-green-100 rounded-2xl flex items-center justify-center text-green-600 text-2xl shadow-sm">
+                    <i class="fa-solid fa-user-plus"></i>
+                </div>
+                <div>
+                    <h2 class="text-3xl font-extrabold text-slate-800 tracking-tight">Profil Ziyareti ve Takip Kampanyaları</h2>
+                    <p class="text-slate-500 text-sm mt-1">Hedef: Profile çekmek ve etkileşim (Profile Visit View)</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 xl:grid-cols-2 gap-6 relative z-10">
+
+                <!-- Takip 1 -->
+                <div class="bg-slate-50/50 rounded-2xl p-5 border border-slate-100 flex flex-col sm:flex-row gap-6 items-center sm:items-start group hover:bg-white hover:border-green-200 hover:shadow-md transition-all">
+                    <div class="phone-mockup"><div class="placeholder-content"><i class="fa-regular fa-image text-3xl mb-2 opacity-50"></i><span class="text-xs font-medium">
+                        <div class="phone-mockup w-48 h-64 bg-gray-200 overflow-hidden rounded-xl">
+    <div class="placeholder-content w-full h-full flex items-center justify-center">
+        <img src="images/gilig-sokak-iftarda-lezzet-arayanlara.jpeg" 
+             alt="Dondurma" 
+             class="w-full h-full object-cover">
+    </div>
+</div>
+                    </span></div></div>
+                    <div class="flex-1 w-full">
+                        <div class="text-[11px] font-bold tracking-wider text-slate-400 uppercase mb-1">1 - 18 Mart <span class="mx-1">|</span> Visit</div>
+                        <h3 class="text-[17px] font-bold text-slate-900 mb-4 group-hover:text-green-600 transition-colors leading-tight">Instagram gönderisi: İftarda lezzet arayanlara...</h3>
+                        <div class="grid grid-cols-3 gap-2 mb-2">
+                            <div class="bg-green-50 p-2.5 rounded-xl border border-green-100 shadow-sm"><p class="text-[10px] text-green-700 mb-1">P. Ziyareti (Sonuç)</p><p class="font-bold text-green-800 text-sm">308</p></div>
+                            <div class="bg-white p-2.5 rounded-xl border border-slate-100 shadow-sm"><p class="text-[10px] text-slate-500 mb-1">Gösterim</p><p class="font-bold text-slate-800 text-sm">8.841</p></div>
+                            <div class="bg-white p-2.5 rounded-xl border border-slate-100 shadow-sm"><p class="text-[10px] text-slate-500 mb-1">Erişim</p><p class="font-bold text-slate-800 text-sm">8.192</p></div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2">
+                            <div class="bg-slate-100/50 p-2 rounded-lg border border-slate-100 flex justify-between items-center"><span class="text-[11px] text-slate-500">Harcama:</span><span class="font-bold text-slate-700 text-sm">556,17 ₺</span></div>
+                            <div class="bg-pink-50 p-2 rounded-lg border border-pink-100 flex justify-between items-center"><span class="text-[11px] text-pink-600">Takipçi:</span><span class="font-bold text-pink-700 text-sm">+21</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Takip 2 -->
+                <div class="bg-slate-50/50 rounded-2xl p-5 border border-slate-100 flex flex-col sm:flex-row gap-6 items-center sm:items-start group hover:bg-white hover:border-green-200 hover:shadow-md transition-all">
+                    <div class="phone-mockup"><div class="placeholder-content"><i class="fa-regular fa-image text-3xl mb-2 opacity-50"></i><span class="text-xs font-medium">
+                        <div class="phone-mockup w-48 h-64 bg-gray-200 overflow-hidden rounded-xl">
+    <div class="placeholder-content w-full h-full flex items-center justify-center">
+        <img src="images/dondurma-kat-kat-kreması.jpeg" 
+             alt="Dondurma" 
+             class="w-full h-full object-cover">
+    </div>
+</div>
+                    </span></div></div>
+                    <div class="flex-1 w-full">
+                        <div class="text-[11px] font-bold tracking-wider text-slate-400 uppercase mb-1">1 - 30 Mart <span class="mx-1">|</span> Visit</div>
+                        <h3 class="text-[17px] font-bold text-slate-900 mb-4 group-hover:text-green-600 transition-colors leading-tight">Instagram gönderisi: Kat kat kreması, dengeli...</h3>
+                        <div class="grid grid-cols-3 gap-2 mb-2">
+                            <div class="bg-green-50 p-2.5 rounded-xl border border-green-100 shadow-sm"><p class="text-[10px] text-green-700 mb-1">P. Ziyareti (Sonuç)</p><p class="font-bold text-green-800 text-sm">2.785</p></div>
+                            <div class="bg-white p-2.5 rounded-xl border border-slate-100 shadow-sm"><p class="text-[10px] text-slate-500 mb-1">Gösterim</p><p class="font-bold text-slate-800 text-sm">93.117</p></div>
+                            <div class="bg-white p-2.5 rounded-xl border border-slate-100 shadow-sm"><p class="text-[10px] text-slate-500 mb-1">Erişim</p><p class="font-bold text-slate-800 text-sm">64.833</p></div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2">
+                            <div class="bg-slate-100/50 p-2 rounded-lg border border-slate-100 flex justify-between items-center"><span class="text-[11px] text-slate-500">Harcama:</span><span class="font-bold text-slate-700 text-sm">5.971,00 ₺</span></div>
+                            <div class="bg-pink-50 p-2 rounded-lg border border-pink-100 flex justify-between items-center"><span class="text-[11px] text-pink-600">Takipçi:</span><span class="font-bold text-pink-700 text-sm">+185</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Takip 3 -->
+                <div class="bg-slate-50/50 rounded-2xl p-5 border border-slate-100 flex flex-col sm:flex-row gap-6 items-center sm:items-start group hover:bg-white hover:border-green-200 hover:shadow-md transition-all">
+                    <div class="phone-mockup"><div class="placeholder-content"><i class="fa-regular fa-image text-3xl mb-2 opacity-50"></i><span class="text-xs font-medium">
+                        <div class="phone-mockup w-48 h-64 bg-gray-200 overflow-hidden rounded-xl">
+    <div class="placeholder-content w-full h-full flex items-center justify-center">
+        <img src="images/dondurma-sade-yagli-pancar.jpeg" 
+             alt="Dondurma" 
+             class="w-full h-full object-cover">
+    </div>
+</div>
+                    </span></div></div>
+                    <div class="flex-1 w-full">
+                        <div class="text-[11px] font-bold tracking-wider text-slate-400 uppercase mb-1">1 - 18 Mart <span class="mx-1">|</span> Visit</div>
+                        <h3 class="text-[17px] font-bold text-slate-900 mb-4 group-hover:text-green-600 transition-colors leading-tight">Instagram gönderisi: Sade yağlı, pancar şekeriyle...</h3>
+                        <div class="grid grid-cols-3 gap-2 mb-2">
+                            <div class="bg-green-50 p-2.5 rounded-xl border border-green-100 shadow-sm"><p class="text-[10px] text-green-700 mb-1">P. Ziyareti (Sonuç)</p><p class="font-bold text-green-800 text-sm">1.671</p></div>
+                            <div class="bg-white p-2.5 rounded-xl border border-slate-100 shadow-sm"><p class="text-[10px] text-slate-500 mb-1">Gösterim</p><p class="font-bold text-slate-800 text-sm">39.708</p></div>
+                            <div class="bg-white p-2.5 rounded-xl border border-slate-100 shadow-sm"><p class="text-[10px] text-slate-500 mb-1">Erişim</p><p class="font-bold text-slate-800 text-sm">27.667</p></div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2">
+                            <div class="bg-slate-100/50 p-2 rounded-lg border border-slate-100 flex justify-between items-center"><span class="text-[11px] text-slate-500">Harcama:</span><span class="font-bold text-slate-700 text-sm">3.489,63 ₺</span></div>
+                            <div class="bg-pink-50 p-2 rounded-lg border border-pink-100 flex justify-between items-center"><span class="text-[11px] text-pink-600">Takipçi:</span><span class="font-bold text-pink-700 text-sm">+145</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Takip 4 -->
+                <div class="bg-slate-50/50 rounded-2xl p-5 border border-slate-100 flex flex-col sm:flex-row gap-6 items-center sm:items-start group hover:bg-white hover:border-green-200 hover:shadow-md transition-all">
+                    <div class="phone-mockup"><div class="placeholder-content"><i class="fa-regular fa-image text-3xl mb-2 opacity-50"></i><span class="text-xs font-medium">
+                     <div class="phone-mockup w-48 h-64 bg-gray-200 overflow-hidden rounded-xl">
+    <div class="placeholder-content w-full h-full flex items-center justify-center">
+        <img src="images/dondurma-antalyanin-ozgun-lezzeti.jpeg" 
+             alt="Dondurma" 
+             class="w-full h-full object-cover">
+    </div>
+</div>
+                    </span></div></div>
+                    <div class="flex-1 w-full">
+                        <div class="text-[11px] font-bold tracking-wider text-slate-400 uppercase mb-1">1 - 18 Mart <span class="mx-1">|</span> Visit</div>
+                        <h3 class="text-[17px] font-bold text-slate-900 mb-4 group-hover:text-green-600 transition-colors leading-tight">Instagram gönderisi: Antalya'nın özgün lezzeti:...</h3>
+                        <div class="grid grid-cols-3 gap-2 mb-2">
+                            <div class="bg-green-50 p-2.5 rounded-xl border border-green-100 shadow-sm"><p class="text-[10px] text-green-700 mb-1">P. Ziyareti (Sonuç)</p><p class="font-bold text-green-800 text-sm">3.010</p></div>
+                            <div class="bg-white p-2.5 rounded-xl border border-slate-100 shadow-sm"><p class="text-[10px] text-slate-500 mb-1">Gösterim</p><p class="font-bold text-slate-800 text-sm">57.864</p></div>
+                            <div class="bg-white p-2.5 rounded-xl border border-slate-100 shadow-sm"><p class="text-[10px] text-slate-500 mb-1">Erişim</p><p class="font-bold text-slate-800 text-sm">47.484</p></div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2">
+                            <div class="bg-slate-100/50 p-2 rounded-lg border border-slate-100 flex justify-between items-center"><span class="text-[11px] text-slate-500">Harcama:</span><span class="font-bold text-slate-700 text-sm">3.495,50 ₺</span></div>
+                            <div class="bg-pink-50 p-2 rounded-lg border border-pink-100 flex justify-between items-center"><span class="text-[11px] text-pink-600">Takipçi:</span><span class="font-bold text-pink-700 text-sm">+144</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Takip 5 -->
+                <div class="bg-slate-50/50 rounded-2xl p-5 border border-slate-100 flex flex-col sm:flex-row gap-6 items-center sm:items-start group hover:bg-white hover:border-green-200 hover:shadow-md transition-all">
+                    <div class="phone-mockup"><div class="placeholder-content"><i class="fa-regular fa-image text-3xl mb-2 opacity-50"></i><span class="text-xs font-medium">
+                        <div class="phone-mockup w-48 h-64 bg-gray-200 overflow-hidden rounded-xl">
+    <div class="placeholder-content w-full h-full flex items-center justify-center">
+        <img src="images/dondurma-gercek-profiterol.jpeg" 
+             alt="Dondurma" 
+             class="w-full h-full object-cover">
+    </div>
+</div>
+                    </span></div></div>
+                    <div class="flex-1 w-full">
+                        <div class="text-[11px] font-bold tracking-wider text-slate-400 uppercase mb-1">1 - 18 Mart <span class="mx-1">|</span> Visit</div>
+                        <h3 class="text-[17px] font-bold text-slate-900 mb-4 group-hover:text-green-600 transition-colors leading-tight">Instagram gönderisi: Gerçek profiterol deneyimi...</h3>
+                        <div class="grid grid-cols-3 gap-2 mb-2">
+                            <div class="bg-green-50 p-2.5 rounded-xl border border-green-100 shadow-sm"><p class="text-[10px] text-green-700 mb-1">P. Ziyareti (Sonuç)</p><p class="font-bold text-green-800 text-sm">1.489</p></div>
+                            <div class="bg-white p-2.5 rounded-xl border border-slate-100 shadow-sm"><p class="text-[10px] text-slate-500 mb-1">Gösterim</p><p class="font-bold text-slate-800 text-sm">41.709</p></div>
+                            <div class="bg-white p-2.5 rounded-xl border border-slate-100 shadow-sm"><p class="text-[10px] text-slate-500 mb-1">Erişim</p><p class="font-bold text-slate-800 text-sm">33.802</p></div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2">
+                            <div class="bg-slate-100/50 p-2 rounded-lg border border-slate-100 flex justify-between items-center"><span class="text-[11px] text-slate-500">Harcama:</span><span class="font-bold text-slate-700 text-sm">3.493,66 ₺</span></div>
+                            <div class="bg-pink-50 p-2 rounded-lg border border-pink-100 flex justify-between items-center"><span class="text-[11px] text-pink-600">Takipçi:</span><span class="font-bold text-pink-700 text-sm">+166</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Takip 6 -->
+                <div class="bg-slate-50/50 rounded-2xl p-5 border border-slate-100 flex flex-col sm:flex-row gap-6 items-center sm:items-start group hover:bg-white hover:border-green-200 hover:shadow-md transition-all">
+                    <div class="phone-mockup"><div class="placeholder-content"><i class="fa-regular fa-image text-3xl mb-2 opacity-50"></i><span class="text-xs font-medium">
+                        <div class="phone-mockup w-48 h-64 bg-gray-200 overflow-hidden rounded-xl">
+    <div class="placeholder-content w-full h-full flex items-center justify-center">
+        <img src="images/dondurma-keci-sutlu.jpeg" 
+             alt="Dondurma" 
+             class="w-full h-full object-cover">
+    </div>
+</div>
+                    </span></div></div>
+                    <div class="flex-1 w-full">
+                        <div class="text-[11px] font-bold tracking-wider text-slate-400 uppercase mb-1">1 - 30 Mart <span class="mx-1">|</span> Visit</div>
+                        <h3 class="text-[17px] font-bold text-slate-900 mb-4 group-hover:text-green-600 transition-colors leading-tight">Instagram gönderisi: 🐐 %100 Keçi Sütlü Tarihi...</h3>
+                        <div class="grid grid-cols-3 gap-2 mb-2">
+                            <div class="bg-green-50 p-2.5 rounded-xl border border-green-100 shadow-sm"><p class="text-[10px] text-green-700 mb-1">P. Ziyareti (Sonuç)</p><p class="font-bold text-green-800 text-sm">5.790</p></div>
+                            <div class="bg-white p-2.5 rounded-xl border border-slate-100 shadow-sm"><p class="text-[10px] text-slate-500 mb-1">Gösterim</p><p class="font-bold text-slate-800 text-sm">116.049</p></div>
+                            <div class="bg-white p-2.5 rounded-xl border border-slate-100 shadow-sm"><p class="text-[10px] text-slate-500 mb-1">Erişim</p><p class="font-bold text-slate-800 text-sm">95.921</p></div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2">
+                            <div class="bg-slate-100/50 p-2 rounded-lg border border-slate-100 flex justify-between items-center"><span class="text-[11px] text-slate-500">Harcama:</span><span class="font-bold text-slate-700 text-sm">5.939,55 ₺</span></div>
+                            <div class="bg-pink-50 p-2 rounded-lg border border-pink-100 flex justify-between items-center"><span class="text-[11px] text-pink-600">Takipçi:</span><span class="font-bold text-pink-700 text-sm">+283</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Takip 7 -->
+                <div class="bg-slate-50/50 rounded-2xl p-5 border border-slate-100 flex flex-col sm:flex-row gap-6 items-center sm:items-start group hover:bg-white hover:border-green-200 hover:shadow-md transition-all">
+                    <div class="phone-mockup"><div class="placeholder-content"><i class="fa-regular fa-image text-3xl mb-2 opacity-50"></i><span class="text-xs font-medium">
+                        <div class="phone-mockup w-48 h-64 bg-gray-200 overflow-hidden rounded-xl">
+    <div class="placeholder-content w-full h-full flex items-center justify-center">
+        <img src="images/gilig-sokak-iftarda-lezzet-arayanlara.jpeg" 
+             alt="Dondurma" 
+             class="w-full h-full object-cover">
+    </div>
+</div>
+                    </span></div></div>
+                    <div class="flex-1 w-full">
+                        <div class="text-[11px] font-bold tracking-wider text-slate-400 uppercase mb-1">1 - 18 Mart <span class="mx-1">|</span> Visit</div>
+                        <h3 class="text-[17px] font-bold text-slate-900 mb-4 group-hover:text-green-600 transition-colors leading-tight">İftarda lezzet arayanlara...</h3>
+                        <div class="grid grid-cols-3 gap-2 mb-2">
+                            <div class="bg-green-50 p-2.5 rounded-xl border border-green-100 shadow-sm"><p class="text-[10px] text-green-700 mb-1">P. Ziyareti (Sonuç)</p><p class="font-bold text-green-800 text-sm">4.566</p></div>
+                            <div class="bg-white p-2.5 rounded-xl border border-slate-100 shadow-sm"><p class="text-[10px] text-slate-500 mb-1">Gösterim</p><p class="font-bold text-slate-800 text-sm">99.627</p></div>
+                            <div class="bg-white p-2.5 rounded-xl border border-slate-100 shadow-sm"><p class="text-[10px] text-slate-500 mb-1">Erişim</p><p class="font-bold text-slate-800 text-sm">61.692</p></div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2">
+                            <div class="bg-slate-100/50 p-2 rounded-lg border border-slate-100 flex justify-between items-center"><span class="text-[11px] text-slate-500">Harcama:</span><span class="font-bold text-slate-700 text-sm">7.538,09 ₺</span></div>
+                            <div class="bg-pink-50 p-2 rounded-lg border border-pink-100 flex justify-between items-center"><span class="text-[11px] text-pink-600">Takipçi:</span><span class="font-bold text-pink-700 text-sm">+137</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Takip 8 -->
+                <div class="bg-slate-50/50 rounded-2xl p-5 border border-slate-100 flex flex-col sm:flex-row gap-6 items-center sm:items-start group hover:bg-white hover:border-green-200 hover:shadow-md transition-all">
+                    <div class="phone-mockup"><div class="placeholder-content"><i class="fa-regular fa-image text-3xl mb-2 opacity-50"></i><span class="text-xs font-medium">
+                        <div class="phone-mockup w-48 h-64 bg-gray-200 overflow-hidden rounded-xl">
+    <div class="placeholder-content w-full h-full flex items-center justify-center">
+        <img src="images/gilig-sokak-izmirin-sevilen.jpeg" 
+             alt="Dondurma" 
+             class="w-full h-full object-cover">
+    </div>
+</div>
+                    </span></div></div>
+                    <div class="flex-1 w-full">
+                        <div class="text-[11px] font-bold tracking-wider text-slate-400 uppercase mb-1">1 - 30 Mart <span class="mx-1">|</span> Visit</div>
+                        <h3 class="text-[17px] font-bold text-slate-900 mb-4 group-hover:text-green-600 transition-colors leading-tight">Instagram gönderisi: İzmir'in sevilen sokak...</h3>
+                        <div class="grid grid-cols-3 gap-2 mb-2">
+                            <div class="bg-green-50 p-2.5 rounded-xl border border-green-100 shadow-sm"><p class="text-[10px] text-green-700 mb-1">P. Ziyareti (Sonuç)</p><p class="font-bold text-green-800 text-sm">4.901</p></div>
+                            <div class="bg-white p-2.5 rounded-xl border border-slate-100 shadow-sm"><p class="text-[10px] text-slate-500 mb-1">Gösterim</p><p class="font-bold text-slate-800 text-sm">138.628</p></div>
+                            <div class="bg-white p-2.5 rounded-xl border border-slate-100 shadow-sm"><p class="text-[10px] text-slate-500 mb-1">Erişim</p><p class="font-bold text-slate-800 text-sm">101.880</p></div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2">
+                            <div class="bg-slate-100/50 p-2 rounded-lg border border-slate-100 flex justify-between items-center"><span class="text-[11px] text-slate-500">Harcama:</span><span class="font-bold text-slate-700 text-sm">8.149,63 ₺</span></div>
+                            <div class="bg-pink-50 p-2 rounded-lg border border-pink-100 flex justify-between items-center"><span class="text-[11px] text-pink-600">Takipçi:</span><span class="font-bold text-pink-700 text-sm">+123</span></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Takip 9 -->
+                <div class="bg-slate-50/50 rounded-2xl p-5 border border-slate-100 flex flex-col sm:flex-row gap-6 items-center sm:items-start group hover:bg-white hover:border-green-200 hover:shadow-md transition-all">
+                    <div class="phone-mockup"><div class="placeholder-content"><i class="fa-regular fa-image text-3xl mb-2 opacity-50"></i><span class="text-xs font-medium">
+                        <div class="phone-mockup w-48 h-64 bg-gray-200 overflow-hidden rounded-xl">
+    <div class="placeholder-content w-full h-full flex items-center justify-center">
+        <img src="images/dondurma-bayram-geliyor.jpeg" 
+             alt="Dondurma" 
+             class="w-full h-full object-cover">
+    </div>
+</div>
+                    </span></div></div>
+                    <div class="flex-1 w-full">
+                        <div class="text-[11px] font-bold tracking-wider text-slate-400 uppercase mb-1">1 Mart - 18 Nisan <span class="mx-1">|</span> Visit</div>
+                        <h3 class="text-[17px] font-bold text-slate-900 mb-4 group-hover:text-green-600 transition-colors leading-tight">Giliğ Dondurma 13-18 Mart 2026 Bayram Geliyor</h3>
+                        <div class="grid grid-cols-3 gap-2 mb-2">
+                            <div class="bg-green-50 p-2.5 rounded-xl border border-green-100 shadow-sm"><p class="text-[10px] text-green-700 mb-1">P. Ziyareti (Sonuç)</p><p class="font-bold text-green-800 text-sm">5.621</p></div>
+                            <div class="bg-white p-2.5 rounded-xl border border-slate-100 shadow-sm"><p class="text-[10px] text-slate-500 mb-1">Gösterim</p><p class="font-bold text-slate-800 text-sm">56.079</p></div>
+                            <div class="bg-white p-2.5 rounded-xl border border-slate-100 shadow-sm"><p class="text-[10px] text-slate-500 mb-1">Erişim</p><p class="font-bold text-slate-800 text-sm">50.524</p></div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2">
+                            <div class="bg-slate-100/50 p-2 rounded-lg border border-slate-100 flex justify-between items-center"><span class="text-[11px] text-slate-500">Harcama:</span><span class="font-bold text-slate-700 text-sm">11.793,04 ₺</span></div>
+                            <div class="bg-pink-50 p-2 rounded-lg border border-pink-100 flex justify-between items-center"><span class="text-[11px] text-pink-600">Takipçi:</span><span class="font-bold text-pink-700 text-sm">+300</span></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- 4. LİDERLİK TABLOSU (Güncel Verilerle) -->
+        <section class="mt-8">
+            <div class="flex items-center gap-2 mb-6">
+                <i class="fa-solid fa-trophy text-yellow-500 text-xl"></i>
+                <h2 class="text-2xl font-bold text-slate-800">En Yüksek Sonuç Alan Kampanyalar</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Bilinirlik Liderleri -->
+                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+                    <div class="bg-slate-50 px-5 py-4 border-b border-slate-200 flex justify-between items-center">
+                        <h3 class="font-bold text-slate-800">Erişim / Bilinirlik Liderleri</h3>
+                        <i class="fa-solid fa-chart-line text-blue-500"></i>
+                    </div>
+                    <ul class="divide-y divide-slate-100">
+                        <li class="p-4 flex items-center justify-between hover:bg-slate-50 transition-colors">
+                            <div class="pr-4"><p class="font-medium text-slate-800 text-sm leading-tight">Giliğ Sokak Lezzetleri 03-18 Mart</p></div>
+                            <span class="font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded-lg text-sm shrink-0">613.742</span>
+                        </li>
+                        <li class="p-4 flex items-center justify-between hover:bg-slate-50 transition-colors">
+                            <div class="pr-4"><p class="font-medium text-slate-800 text-sm leading-tight">Giliğ Sokak L. İzmir Eritme</p></div>
+                            <span class="font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded-lg text-sm shrink-0">168.091</span>
+                        </li>
+                        <li class="p-4 flex items-center justify-between hover:bg-slate-50 transition-colors">
+                            <div class="pr-4"><p class="font-medium text-slate-800 text-sm leading-tight">Geleneksel lezzetlerin sırrı</p></div>
+                            <span class="font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded-lg text-sm shrink-0">144.248</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Takip Liderleri -->
+                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+                    <div class="bg-slate-50 px-5 py-4 border-b border-slate-200 flex justify-between items-center">
+                        <h3 class="font-bold text-slate-800">Profil Ziyareti Liderleri (Top 5)</h3>
+                        <i class="fa-solid fa-arrow-trend-up text-green-500"></i>
+                    </div>
+                    <ul class="divide-y divide-slate-100">
+                        <li class="p-4 flex items-center justify-between hover:bg-slate-50 transition-colors">
+                            <div class="pr-4"><p class="font-medium text-slate-800 text-sm leading-tight">🐐 %100 Keçi Sütlü Tarihi...</p></div>
+                            <span class="font-bold text-green-600 bg-green-50 px-3 py-1 rounded-lg text-sm shrink-0">5.790</span>
+                        </li>
+                        <li class="p-4 flex items-center justify-between hover:bg-slate-50 transition-colors">
+                            <div class="pr-4"><p class="font-medium text-slate-800 text-sm leading-tight">Giliğ Dondurma Bayram Geliyor</p></div>
+                            <span class="font-bold text-green-600 bg-green-50 px-3 py-1 rounded-lg text-sm shrink-0">5.621</span>
+                        </li>
+                        <li class="p-4 flex items-center justify-between hover:bg-slate-50 transition-colors">
+                            <div class="pr-4"><p class="font-medium text-slate-800 text-sm leading-tight">İzmir'in sevilen sokak...</p></div>
+                            <span class="font-bold text-green-600 bg-green-50 px-3 py-1 rounded-lg text-sm shrink-0">4.901</span>
+                        </li>
+                        <li class="p-4 flex items-center justify-between hover:bg-slate-50 transition-colors">
+                            <div class="pr-4"><p class="font-medium text-slate-800 text-sm leading-tight">İftarda lezzet arayanlara...</p></div>
+                            <span class="font-bold text-green-600 bg-green-50 px-3 py-1 rounded-lg text-sm shrink-0">4.566</span>
+                        </li>
+                        <li class="p-4 flex items-center justify-between hover:bg-slate-50 transition-colors">
+                            <div class="pr-4"><p class="font-medium text-slate-800 text-sm leading-tight">Antalya'nın özgün lezzeti...</p></div>
+                            <span class="font-bold text-green-600 bg-green-50 px-3 py-1 rounded-lg text-sm shrink-0">3.010</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Kısa Değerlendirme (Görsel tutarlılık için korundu) -->
+        <section class="mt-8 bg-indigo-900 rounded-3xl p-8 shadow-xl text-white relative overflow-hidden">
+            <div class="absolute top-0 right-0 -mr-16 -mt-16 opacity-10">
+                <i class="fa-solid fa-lightbulb text-[200px]"></i>
+            </div>
+            
+            <div class="relative z-10">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="w-12 h-12 bg-indigo-800 rounded-full flex items-center justify-center text-yellow-400 text-xl">
+                        <i class="fa-regular fa-comment-dots"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold">Kısa Değerlendirme & İçgörüler</h2>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6">
+                    <div class="flex items-start gap-4">
+                        <div class="mt-1 text-indigo-400"><i class="fa-solid fa-circle-check"></i></div>
+                        <p class="text-indigo-50 leading-relaxed"><strong class="text-white">Erişim Tarafı:</strong> Giliğ Sokak Lezzetleri "03-18 Mart" kampanyası 613 binden fazla erişim ile açık ara önde gidiyor.</p>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="mt-1 text-indigo-400"><i class="fa-solid fa-circle-check"></i></div>
+                        <p class="text-indigo-50 leading-relaxed"><strong class="text-white">Profil Ziyareti Zirvesi:</strong> En iyi sonuçları %100 Keçi Sütlü (5.790) ve Bayram Geliyor (5.621) kampanyaları almış durumda.</p>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="mt-1 text-green-400"><i class="fa-solid fa-star"></i></div>
+                        <p class="text-indigo-50 leading-relaxed"><strong class="text-white">İzmir Eritme Etkisi:</strong> Bilinirlik tarafında güçlü bir erişim sağlarken, maliyetine oranla potansiyeli yüksek görünüyor.</p>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="mt-1 text-pink-400"><i class="fa-solid fa-users"></i></div>
+                        <p class="text-indigo-50 leading-relaxed"><strong class="text-white">Takipçi Kazanımı:</strong> Dondurma bazlı "Bayram Geliyor" kampanyası tek başına +300 takipçi getirerek bu alanda liderliği üstlenmiş.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+</body>
+</html>
